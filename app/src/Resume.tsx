@@ -14,11 +14,11 @@ import {
 import {useTrackPageView} from './hooks/useTrackPageView';
 
 function Resume() {
-  useTrackPageView();
+  const pageViewCount = useTrackPageView();
 
   return (
     <>
-      <VisitorCount />
+      <VisitorCount count={pageViewCount} />
       <Page>
         <Header
           name='Vincent C. Llauderes'
@@ -26,7 +26,7 @@ function Resume() {
           mobile='+63 961 527 9309'
           email='llauderesv@gmail.com'
           gitHub='github.com/llauderesv'
-          photoSrc={require('./images/picture.png')}
+          photoSrc={require('./images/photo.png')}
         />
         <Section title='Summary'>
           <Text>

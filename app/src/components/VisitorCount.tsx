@@ -21,7 +21,7 @@ type Props = {
 function VisitorCount({count = 0}: Props): JSX.Element {
   return (
     <Container>
-      <h3>{count} views</h3>
+      <h3>{count.toLocaleString()} views</h3>
     </Container>
   );
 }
