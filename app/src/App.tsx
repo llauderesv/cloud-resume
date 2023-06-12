@@ -1,4 +1,3 @@
-import {styled} from 'styled-components';
 import {
   Margin,
   VisitorCount,
@@ -12,8 +11,11 @@ import {
   Col,
   Lists,
 } from './components';
+import {useTrackPageView} from './hooks/useTrackPageView';
 
 function Resume() {
+  useTrackPageView();
+
   return (
     <>
       <VisitorCount />
