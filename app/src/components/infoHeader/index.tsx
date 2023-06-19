@@ -10,7 +10,7 @@ type Prop = {
 function InfoHeader({title, text, date}: Prop): JSX.Element {
   return (
     <Information>
-      <Text fontSize='1.5rem' margin='15px 0' color='#006cee'>
+      <Text fontSize='1.5rem' margin='15px 0' color='#2b6cc2'>
         {title}
       </Text>
       <Text fontSize='15px'>{text}</Text>

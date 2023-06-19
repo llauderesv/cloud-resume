@@ -2,7 +2,7 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Resume from './Resume';
+import Resume from './App';
 import {GlobalFontStyle} from './fonts';
 import reportWebVitals from './reportWebVitals';
 

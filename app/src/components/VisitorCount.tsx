@@ -6,7 +6,7 @@ const Container = styled.div`
   left: 0;
   min-width: 150px;
   padding: 10px;
-  background-color: #006cee;
+  background-color: #2b6cc2;
   text-align: center;
 
   h3 {
