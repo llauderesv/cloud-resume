@@ -244,7 +244,7 @@ function Resume() {
               <InfoHeader
                 title='STI College Caloocan'
                 text='Bachelor of Science in Information Technology'
-                date='2013 - 2019'
+                date='2013 - 2017'
               />
             </Section>
           </Col>
