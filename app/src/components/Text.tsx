@@ -1,11 +1,16 @@
 import {styled} from 'styled-components';
 
-type Prop = {fontSize?: string; margin?: string; color?: string};
+interface Prop extends React.CSSProperties {
+  fontSize?: string;
+  margin?: string;
+  color?: string;
+}
 
 export const Text = styled.p<Prop>`
   font-weight: 500;
   line-height: 25px;
   font-size: ${props => props.fontSize};
   margin: ${props => props.margin};
-  color: ${props => props.color || '#000'};
+  color: ${props => props.color || props.theme.subTextColor};
+  cursor: ${props => props.cursor};
 `;

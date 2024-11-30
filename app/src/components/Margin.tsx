@@ -1,11 +1,11 @@
 import {styled} from 'styled-components';
 
-type Prop = {
+interface Prop {
   top?: number;
   right?: number;
   bottom?: number;
   left?: number;
-};
+}
 
 export const Margin = styled.div<Prop>`
   margin-top: ${prop => prop.top}px;

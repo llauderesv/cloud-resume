@@ -1,3 +1,4 @@
+import {FC} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -6,24 +7,26 @@ const Container = styled.div`
   left: 0;
   min-width: 150px;
   padding: 10px;
-  background-color: #2b6cc2;
+  background-color: #2789ae;
   text-align: center;
+  z-index: 99999;
 
   h3 {
+    font-weight: 500;
     color: #fff;
   }
 `;
 
-type Props = {
+interface Props {
   count?: number;
-};
+}
 
-function VisitorCount({count = 0}: Props): JSX.Element {
+const VisitorCount: FC<Props> = ({count = 0}): JSX.Element => {
   return (
     <Container>
       <h3>{count.toLocaleString()} views</h3>
     </Container>
   );
-}
+};
 
-export {VisitorCount};
+export default VisitorCount;

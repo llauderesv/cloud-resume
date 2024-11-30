@@ -1,13 +1,10 @@
 import {styled} from 'styled-components';
 
 export const Page = styled.div`
-  margin: 50px;
-  display: flex;
-  min-height: 100vh;
+  margin-top: 50px;
   width: 900px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
   flex-direction: column;
-  padding: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 `;
