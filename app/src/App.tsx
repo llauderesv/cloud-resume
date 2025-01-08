@@ -31,7 +31,7 @@ const App = (): JSX.Element => {
         <Header
           name='Vincent C. Llauderes'
           address='Metro Manila Philippines'
-          mobile='+63 961 527 9309'
+          mobile='+63 961 427 9309'
           email='llauderesv@gmail.com'
           gitHub='github.com/llauderesv'
           photoSrc={require('./images/photo.png')}
