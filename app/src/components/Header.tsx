@@ -52,7 +52,7 @@ const Header: FC<Props> = ({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(text).then(() => {
+    navigator.clipboard.writeText(text.replace(/\s/gi, '')).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000); // Reset after 2 seconds
     });

@@ -4,7 +4,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:1000",
       "webRoot": "${workspaceFolder}"
     },
     {
@@ -46,7 +46,12 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\index.js"
+      "runtimeExecutable": "/Users/vincent.llauderes/.nvm/versions/node/v18.18.0/bin/node",
+      "program": "${workspaceFolder}//src//index.js",
+      "runtimeArgs": [
+        "-r",
+        "esm"
+      ]
     },
     {
       "name": "Node Jest Tests",
@@ -55,7 +60,8 @@
       "runtimeArgs": [
         "--inspect-brk",
         "${workspaceRoot}/node_modules/.bin/jest",
-        "--runInBand"
+        "--runInBand",
+        "src/__test__/applicationServer.test.ts"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -65,6 +71,7 @@
       "name": "Attach to Node Functions",
       "type": "node",
       "request": "attach",
+      "restart": true,
       "port": 9229,
       "preLaunchTask": "func: host start"
     }
