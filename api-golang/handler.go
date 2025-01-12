@@ -83,6 +83,16 @@ func UpdatePageCountHandler(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "GET" {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprint(w, `{"status": "Healthy"}`)
+}
+
 func main() {
 	err := godotenv.Load()
 	if err != nil {
@@ -96,6 +106,7 @@ func main() {
 		listenAddr = ":" + val
 	}
 	http.HandleFunc("/api/updatePageCount", UpdatePageCountHandler)
+	http.HandleFunc("/api/health", HealthCheckHandler)
 	log.Printf("About to listen on %s. Go to http://127.0.0.1%s/", listenAddr, listenAddr)
 	log.Fatal(http.ListenAndServe(listenAddr, nil))
 }
